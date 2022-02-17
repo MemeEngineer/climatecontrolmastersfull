@@ -26,18 +26,19 @@ function App() {
 
 useEffect(() => {
   getjobs();
-}, []);
+},[]);
 
 
 //Adding new job from Form
 const uploadJob= (formData) => {
-  // console.log(formData);
+   console.log(formData);
   // // formData.servicejob = formData.servicejob.split(",");
   // console.log(formData.servicejob);
   fetch(`/jobs`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      'Accept': 'application/json'
     },
     body: JSON.stringify(formData),
   })
