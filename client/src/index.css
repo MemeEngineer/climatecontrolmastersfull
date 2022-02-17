@@ -5,9 +5,65 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   background-color: lightblue; 
+  /* background-image: url('../public/Man.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  font-size: 15px;
+    font-weight: bold; */
 }
-
+ 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 400px;
+  
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background-color: orange;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+::placeholder {
+  text-align: center;
+color: black;
+}
+
+label {
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(233, 110, 10);
+  font-size: 20px;
+  
+}
+
+#wrapper{
+  width: 100%;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: top;
+}
+
+#foot{
+  display:inline-block;
+  justify-content: space-evenly;
+  align-items: center;
 }
