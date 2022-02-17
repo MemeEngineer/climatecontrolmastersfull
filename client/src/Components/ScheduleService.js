@@ -1,7 +1,6 @@
 import React,{useState} from "react";
 
 
-
 function ScheduleService({uploadJob}) {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -9,7 +8,7 @@ function ScheduleService({uploadJob}) {
     email: "",
     telephone: "",
     subject: "",
-    servicejob:"",
+    servicejobs:"",
     message: "",
 
   });
@@ -85,7 +84,7 @@ function ScheduleService({uploadJob}) {
               </div>
               <div>
                 <label>Service Jobs: </label>
-                <select name="servicejob"onChange={handleChange}>
+                <select name="servicejobs"onChange={handleChange}>
                 <option name="installation" onChange={handleChange}>installation</option>
                 <option name="replacement" onChange={handleChange}>replacement</option>
                 <option name="ac-repair" onChange={handleChange}>ac-repair</option>
@@ -121,7 +120,6 @@ function ScheduleService({uploadJob}) {
             </button>
           </form>
 
-            
     </div>
   );
 }
