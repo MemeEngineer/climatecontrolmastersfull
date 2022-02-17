@@ -4,10 +4,11 @@ import Home from "./Components/Home";
 import NavBar from "./Components/NavBar";
 import About from  "./Components/About";
 import ScheduleService from "./Components/ScheduleService";
-import Login from "./Components/Login";
+// import LoginForm from "./Components/LoginForm";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Jobpage from "./Components/Jobpage";
+// import Login from "./pages/Login";
 import './App.css';
 
 function App() {
@@ -19,11 +20,11 @@ function App() {
 
  //Fetch Data from backend
  const getjobs = () => {
-  fetch(`/jobs`)
+  fetch("/jobs")
     .then((response) => response.json())
     .then((data) => setJobs(data));
 };
-
+console.log(jobs)
 useEffect(() => {
   getjobs();
 },[]);
@@ -34,7 +35,7 @@ const uploadJob= (formData) => {
    console.log(formData);
   // // formData.servicejob = formData.servicejob.split(",");
   // console.log(formData.servicejob);
-  fetch(`/jobs`, {
+  fetch("/jobs", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -46,9 +47,11 @@ const uploadJob= (formData) => {
     .then((newJobs) => setNewJobs([...jobs, newJobs]));
 };
 
+
   return (
     <div>
-    <Login />
+      
+  
     <Header />
     <NavBar />
     
