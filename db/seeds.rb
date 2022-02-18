@@ -5,6 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-Job.create(user_id: 1, firstname: "bob", lastname: "builder", email:"bobb@gmail.com", telephone:"1234567890", subject:"repair",servicejobs:"ac-repair", message:"hello")
- User.create(username: "bob", password_digest: "1234", admin: true)
+u1 =User.create(username: "bob", password_digest: "1234", admin: true)
+Job.create(user_id: u1.id, firstname: "bob", lastname: "builder", email:"bobb@gmail.com", telephone:"1234567890", subject:"repair",servicejobs:"ac-repair", message:"hello")
