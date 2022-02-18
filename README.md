@@ -1,5 +1,17 @@
 # Project Template: React/Rails API
 
+###
+use this code to reset postgres database
+- sudo service postgresql restart
+
+run front end:
+-cd climatecontrolmastersfull/client 
+-npm start
+
+run backend:
+-cd climatecontrolmastersfull
+-rails s
+
 ## Description
 
 This project is scaffolded so that you can build a React frontend and Rails
