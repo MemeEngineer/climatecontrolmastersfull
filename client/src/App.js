@@ -35,7 +35,7 @@ const uploadJob= (formData) => {
    console.log(formData);
   // // formData.servicejob = formData.servicejob.split(",");
   // console.log(formData.servicejob);
-  fetch("/jobs", {
+  fetch(`/jobs`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -46,6 +46,7 @@ const uploadJob= (formData) => {
     .then((response) => response.json())
     .then((newJobs) => setNewJobs([...jobs, newJobs]));
 };
+console.log(newJobs);
 const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -80,11 +81,11 @@ const [user, setUser] = useState(null);
         </Route>
 
         <Route exact path="/schedule-service">
-          <ScheduleService uploadJob={uploadJob} user={user}/>
+          <ScheduleService uploadJob={uploadJob} user={user} />
         </Route> 
 
         <Route exact path="/jobpage">
-          <Jobpage newJobs={newJobs} />
+          <Jobpage newJobs={newJobs} jobs={jobs} />
         </Route>
       
       </Switch>

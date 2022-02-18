@@ -24,6 +24,6 @@ end
 
     private
     def job_params
-        params.permit(:firstname, :lastname, :email, :telephone, :subject, :servicejobs, :message)
+        params.require(:user).permit(:firstname, :lastname, :email, :telephone, :subject, :servicejobs, :message, user: [:username, :password])
       end
 end
