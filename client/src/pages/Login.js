@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
-import LoginForm from "../components/LoginForm";
-import SignUpForm from "../components/SignUpForm";
+import LoginForm from "../Components/LoginForm";
+import SignUpForm from "../Components/SignUpForm";
 import { Button } from "../styles";
 
 function Login({ onLogin }) {
@@ -9,7 +9,7 @@ function Login({ onLogin }) {
 
   return (
     <Wrapper>
-      <Logo>Reciplease</Logo>
+      <Logo>ClimateControlMasters</Logo>
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />
@@ -38,14 +38,14 @@ function Login({ onLogin }) {
 }
 
 const Logo = styled.h1`
-  font-family: "Permanent Marker", cursive;
+  font-family: "Goudy Bookletter 1911", cursive;
   font-size: 3rem;
-  color: deeppink;
+  color: red;
   margin: 8px 0 16px;
 `;
 
 const Wrapper = styled.section`
-  max-width: 500px;
+  max-width: 600px;
   margin: 40px auto;
   padding: 16px;
 `;

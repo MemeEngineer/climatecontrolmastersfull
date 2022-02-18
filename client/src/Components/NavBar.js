@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory  } from "react-router-dom";
 
 const linkStyles = {
   display: "inline-block",
@@ -15,7 +15,22 @@ const linkStyles = {
   marginTop: "10px",
 };
 
-function NavBar() {
+function NavBar({user, setUser}) {
+
+  let history = useHistory();
+
+function handleClick(){
+    history.push("/home");
+}
+
+  function handleLogoutClick() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+
+      }
+    });
+  }
   return (
     <div style={{display: "flex",justifyContent: "center"}}>
       <NavLink
@@ -47,6 +62,18 @@ function NavBar() {
         }}
       >
         Schedule Service
+      </NavLink>
+
+      <NavLink
+        to="/"
+        exact
+        style={linkStyles}
+        activeStyle={{
+          background: "orange",
+        }}
+        onClick={()=>handleClick()}
+      >
+       Profile
       </NavLink>
     </div>
   );
