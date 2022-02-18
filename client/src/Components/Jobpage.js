@@ -1,9 +1,11 @@
 import React from "react";
 
-function Jobpage({newJobs}) {
+function Jobpage({jobs}) {
+
+    console.log(jobs)
     return (
-        <div>
- {newJobs.map((job) => (
+        <div style={{display: "flex", justifyContent: "center"}}>
+ {jobs.map((job) => (
      <div key={job.id}>
      <p>{job.firstname}</p>
      <p>{job.lastname}</p>
